@@ -1,0 +1,33 @@
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'java-gradle-plugin'
+
+gradlePlugin {
+    plugins {
+        Site {
+            id = "SiteExtension"
+            implementationClass = "org.java.custom.plugin.SiteExtension"
+        }
+        DataProcessing {
+            id = "DataProcessing"
+            implementationClass = "org.java.custom.plugin.DataProcessingPlugin"
+        }
+        P2RepoDownload {
+            id = "P2RepoDownload"
+            implementationClass = "org.groovy.custom.plugin.MyDownloadPlugin"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'de.undercouch:gradle-download-task:4.0.4'
+    compile 'org.liquibase:liquibase-core:2.0.3'
+}

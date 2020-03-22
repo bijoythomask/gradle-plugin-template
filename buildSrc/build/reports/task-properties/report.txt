@@ -1,0 +1,11 @@
+Warning: Task type 'org.groovy.custom.demo.LiquibaseTask': property 'changeLog' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.demo.LiquibaseTask': property 'command' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.demo.LiquibaseTask': property 'password' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.demo.LiquibaseTask': property 'url' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.demo.LiquibaseTask': property 'username' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.plugin.MyDownloadTask': property 'destDir' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.plugin.MyDownloadTask': property 'release' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.plugin.MyDownloadTask': property 'repos' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.plugin.MyDownloadTask': property 'repository' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.plugin.MyDownloadTask': property 'rootFolder' is not annotated with an input or output annotation.
+Warning: Task type 'org.groovy.custom.task.RepoDownloader': property 'src_list' is not annotated with an input or output annotation.

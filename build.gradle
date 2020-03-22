@@ -1,0 +1,69 @@
+plugins {
+    id 'base'
+    id 'DataProcessing'
+    id 'P2RepoDownload'
+}
+//Default Plugins
+apply plugin: 'groovy'
+apply plugin: 'base'
+//External Plugins
+apply plugin: 'de.undercouch.download'
+//Internal Plugins
+apply plugin: 'DataProcessing'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+import org.groovy.custom.task.RepoDownloader
+
+task bootRun {
+    doFirst {
+        println("Hello From Gradle")
+    }
+    doLast {
+        println("Taks Boot Run Completed")
+    }
+}
+
+P2RepoDownload {
+    artifact{
+        repository = 'https://test.artitactory.com/'
+        release = '19.12'
+        destination = buildDir
+    }
+    repo {
+        //release = 'CEC'
+        version  = '20200322-003'
+    }
+    repo {
+        //release = 'CEC'
+        version  = '20200322-003'
+    }
+}
+
+//task download (type: RepoDownloader) {
+//    src 'http://www.example.com/index.html'
+//    dest buildDir
+//    overwrite false
+//}
+
+//task downloadRepo (type: RepoDownloader) {
+//    repository  = 'https://test.artifactory/CEC'
+//    release = '19.12'
+//    p2repo = 'CEC'
+//    destDir = buildDir
+//    artifacts = [
+//            [repo: 'CECUSP', version: 'cec-2010.20200319'],
+//            [repo: 'CECUSP', version: 'cec-2010.20200319']
+//    ]
+//}
+
+//site {
+//    outputDir = file('build/mysite')
+//
+//    customData {
+//        websiteUrl = 'https://gradle.org'
+//        vcsUrl = 'https://github.com/gradle/gradle-site-plugin'
+//    }
+//}
